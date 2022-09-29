@@ -94,32 +94,32 @@ class HourlyWorker(Employee):
 #billie = Employee('Billie')
 
 billie = SalaryWorker("Billie", 4000)
-print(billie)
+#print(billie)
 
 # Charlie works on a contract of 100 hours at 25/hour.  Their total pay is 2500.
 
 #charlie = Employee('Charlie')
 charlie = HourlyWorker("Charlie", 25,100)
-print(charlie)
+#print(charlie)
 
 
 
 # Renee works on a monthly salary of 3000 and receives a commission for 4 contract(s) at 200/contract.  Their total pay is 3800.
 #renee = Employee('Renee')
 renee = SalaryWorker("Renee", 3000, "contractual", 200, 4)
-print(renee)
+#print(renee)
 
 # Jan works on a contract of 150 hours at 25/hour and receives a commission for 3 contract(s) at 220/contract.  Their total pay is 4410.
 #jan = Employee('Jan')
 jan = HourlyWorker("Jan", 25, 150, "contractual", 220, 3)
-print(jan)
+#print(jan)
 
 # Robbie works on a monthly salary of 2000 and receives a bonus commission of 1500.  Their total pay is 3500.
 #robbie = Employee('Robbie')
 robbie = SalaryWorker("Robbie", 2000, "fixed bonus", 1500)
-print(robbie)
+#print(robbie)
 
 # Ariel works on a contract of 120 hours at 30/hour and receives a bonus commission of 600.  Their total pay is 4200.
 #ariel = Employee('Ariel')
 ariel = HourlyWorker("Ariel", 30, 120, "fixed bonus", 600)
-print(ariel)
+#print(ariel)
