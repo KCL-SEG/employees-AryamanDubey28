@@ -26,7 +26,7 @@ class Employee:
         
 
     def get_pay(self):
-            print("reached")
+            
             if self.commission_type:
                 return self.payment + self.addCommission(self.commission_type,self.commission)
             else:
@@ -51,11 +51,11 @@ class SalaryWorker(Employee):
     def __str__(self):
         message  = (f"{self.name} works on a monthly salary of {self.salary}")
         if self.commission_type == "fixed bonus":
-            message += (f" and recieves a bonus commission of {self.commission}")
+            message += (f" and receives a bonus commission of {self.commission}")
         elif self.commission_type == "contractual":
-            message += (f" and recieves a commission for {self.num_of_contracts} contract(s) at {self.commission}/contract.")
+            message += (f" and receives a commission for {self.num_of_contracts} contract(s) at {self.commission}/contract")
         
-        message += (f". Their total pay is {self.get_pay()}")
+        message += (f".  Their total pay is {self.get_pay()}.")
         return message
         
 
@@ -77,11 +77,11 @@ class HourlyWorker(Employee):
     def __str__(self):
          message  = (f"{self.name} works on a contract of {self.hours} hours at {self.wage}/hour")
          if self.commission_type == "fixed bonus":
-            message += (f" and recieves a bonus commission of {self.commission}")
+            message += (f" and receives a bonus commission of {self.commission}")
          elif self.commission_type == "contractual":
-            message += (f" and recieves a commission for {self.num_of_contracts} contract(s) at {self.commission}/contract.")
+            message += (f" and receives a commission for {self.num_of_contracts} contract(s) at {self.commission}/contract")
         
-         message += (f". Their total pay is {self.get_pay()}")
+         message += (f".  Their total pay is {self.get_pay()}.")
 
          return message
         
@@ -94,7 +94,7 @@ class HourlyWorker(Employee):
 #billie = Employee('Billie')
 
 billie = SalaryWorker("Billie", 4000)
-#print(billie)
+
 
 # Charlie works on a contract of 100 hours at 25/hour.  Their total pay is 2500.
 
@@ -104,14 +104,18 @@ charlie = HourlyWorker("Charlie", 25,100)
 
 
 
+
+
 # Renee works on a monthly salary of 3000 and receives a commission for 4 contract(s) at 200/contract.  Their total pay is 3800.
 #renee = Employee('Renee')
 renee = SalaryWorker("Renee", 3000, "contractual", 200, 4)
-#print(renee)
+
 
 # Jan works on a contract of 150 hours at 25/hour and receives a commission for 3 contract(s) at 220/contract.  Their total pay is 4410.
 #jan = Employee('Jan')
 jan = HourlyWorker("Jan", 25, 150, "contractual", 220, 3)
+
+
 #print(jan)
 
 # Robbie works on a monthly salary of 2000 and receives a bonus commission of 1500.  Their total pay is 3500.
@@ -119,7 +123,16 @@ jan = HourlyWorker("Jan", 25, 150, "contractual", 220, 3)
 robbie = SalaryWorker("Robbie", 2000, "fixed bonus", 1500)
 #print(robbie)
 
+
+
 # Ariel works on a contract of 120 hours at 30/hour and receives a bonus commission of 600.  Their total pay is 4200.
 #ariel = Employee('Ariel')
 ariel = HourlyWorker("Ariel", 30, 120, "fixed bonus", 600)
 #print(ariel)
+
+
+
+
+
+
+
